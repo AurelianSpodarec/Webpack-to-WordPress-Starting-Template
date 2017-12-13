@@ -1,0 +1,59 @@
+// ==========================================================================
+// #Base
+// ==========================================================================
+
+*, *:before, *:after {
+	@include box-sizing(border-box);
+}
+
+body {
+	font-family: $global-font-family;
+    font-size: $global-font-size;
+    line-height: ($global-line-height/$global-font-size);
+    color: $global-text-color;
+    background-color: $global-background-color;
+    @if ($global-body-antialiased) {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 0;
+    border-top: 1px solid #c1c6cb;
+}
+
+blockquote cite {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 0;
+}

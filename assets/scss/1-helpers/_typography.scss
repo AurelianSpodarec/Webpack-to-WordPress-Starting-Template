@@ -1,0 +1,44 @@
+// ==========================================================================
+// #Mixins: Typography
+// ==========================================================================
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+
+$font-family-sans: sans-serif;
+$font-family-lato: 'Lato';
+$font-family-monst: 'Montserrat', sans-serif;
+
+$font-family-primary: $font-family-lato;
+$font-family-secondary: $font-family-monst;
+
+$base-font-family: $font-family-sans, $font-family-lato;
+
+
+$base-scale: 1.5;
+$base-unit: 'em';
+$base-font-size: 15px;
+
+$base-line-height: $base-scale * $base-font-size;
+ 
+
+// $h1-font-size: 2.7 * $base-font-size;
+// $h2-font-size: 1.25 * $base-font-size;
+// $h3-font-size: 1.15 * $base-font-size;
+ 
+
+// Font Size
+// -------------
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// Text overflow
+// -------------
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
